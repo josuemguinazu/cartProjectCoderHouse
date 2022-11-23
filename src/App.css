@@ -1,38 +1,90 @@
-.App {
-  text-align: center;
+/* HERO component */
+.Hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.heroImgDiv {
+  width: 50vw;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.heroImgDiv img {
+  width: 100%;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.heroTextDiv {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  padding: 12%;
 }
 
-.App-link {
-  color: #61dafb;
+/* GREETING component */
+.greeting {
+  height: 8vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(240, 128, 128);
+  background: rgb(237, 237, 233);
+  background: linear-gradient(
+    144deg,
+    rgba(237, 237, 233, 1) 0%,
+    rgba(214, 204, 194, 1) 34%,
+    rgba(245, 235, 224, 1) 48%,
+    rgba(227, 213, 202, 1) 66%
+  );
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* FORM component */
+.form {
+  padding: 3%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-control:focus {
+  border: none;
+  outline: 4px solid rgba(245, 235, 224, 1);
+  transition: 0.3s;
+}
+
+/* FOOTER component */
+.Footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 2%;
+  background: rgb(240, 128, 128);
+  background: rgb(237, 237, 233);
+  background: linear-gradient(
+    144deg,
+    rgba(237, 237, 233, 1) 0%,
+    rgba(214, 204, 194, 1) 34%,
+    rgba(245, 235, 224, 1) 48%,
+    rgba(227, 213, 202, 1) 66%
+  );
+}
+.FooterIcons {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.FooterIcons svg {
+  color: rgb(203, 195, 186);
+  width: 2.2rem;
+  height: 2.2rem;
+  transition: 0.4s;
+}
+.FooterIcons svg:hover {
+  transform: scale(1.2) rotate(360deg);
+  cursor: pointer;
+  color: rgb(187, 119, 119);
+  transition: 0.4s;
+}
+
+.FooterInfo ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.1rem;
 }
