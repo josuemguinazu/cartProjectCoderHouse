@@ -1,0 +1,11 @@
+[
+  { "id": "1", "categoria": "admin", "nombre": "Camisa dama", "tela": "Dupion", "img": "./img/admin3.jpg", "precio": "4290" },
+  { "id": "2", "categoria": "admin", "nombre": "Camisa dama", "tela": "Ratier", "img": "./img/admin4.jpg", "precio": "4990" },
+  { "id": "3", "categoria": "admin", "nombre": "Camisa dama", "tela": "Batista", "img": "./img/admin3.jpg", "precio": "3890" },
+  { "id": "4", "categoria": "admin", "nombre": "Pantalón vestir", "tela": "Gab/spdx", "img": "./img/admin6.jpg", "precio": "4990" },
+  { "id": "5", "categoria": "admin", "nombre": "Saco sastrería", "tela": "Gab/spdx", "img": "./img/admin8.jpg", "precio": "8990" },
+  { "id": "6", "categoria": "sanid", "nombre": "Ambo médico", "tela": "Arciel", "img": "./img/sanid2.jpg", "precio": "6690" },
+  { "id": "7", "categoria": "sanid", "nombre": "Ambo diseño", "tela": "Arciel", "img": "./img/sanid4.jpg", "precio": "8290" },
+  { "id": "8", "categoria": "sanid", "nombre": "Ambo combinado", "tela": "Arciel", "img": "./img/sanid6.jpg", "precio": "4890" },
+  { "id": "9", "categoria": "sanid", "nombre": "Guardapolvo", "tela": "Arciel", "img": "./img/sanid8.jpg", "precio": "5290" }
+]

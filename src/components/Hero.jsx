@@ -1,5 +1,5 @@
 import React from 'react';
-import heroPicture from '../img/Hero.jpg';
+import heroPicture from '../logos/Hero.jpg';
 
 const Hero = () => {
   const titulo = 'Uniformes Empresariales';

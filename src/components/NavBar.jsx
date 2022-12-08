@@ -1,87 +1,60 @@
-import React from 'react';
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
 import CartWidget from './CartWidget';
+import { Link } from 'react-router-dom';
+import logo from '../logos/logoU.png';
 
-const Navbar = () => {
+function NavBar() {
   return (
-    <div className='NavBar'>
-      <nav className='navbar navbar-expand-lg bg-light'>
-        <div className='container-fluid'>
-          <nav className='navbar bg-light'>
-            <div className='container'>
-              <a className='navbar-brand' href='#'>
-                <img src={require('../img/logoU.png')} alt='Logo Uniformes' width='22' />
-              </a>
-            </div>
-          </nav>
-          <button
-            className='navbar-toggler'
-            type='button'
-            data-bs-toggle='collapse'
-            data-bs-target='#navbarSupportedContent'
-            aria-controls='navbarSupportedContent'
-            aria-expanded='false'
-            aria-label='Toggle navigation'
-          >
-            <span className='navbar-toggler-icon'></span>
-          </button>
-          <div className='collapse navbar-collapse' id='navbarSupportedContent'>
-            <ul className='navbar-nav me-auto mb-2 mb-lg-0'>
-              <li className='nav-item'>
-                <a className='nav-link active' aria-current='page' href='#'>
+    <div>
+      <Navbar className='NavBar' bg='light' expand='lg'>
+        <Container className='leftSide'>
+          {/* //logo imagen uniformes */}
+          <Navbar.Brand>
+            <img src={logo} alt='Logo Uniformes' width='22' />
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls='basic-navbar-nav' />
+          <Navbar.Collapse id='basic-navbar-nav'>
+            <Nav className='me-auto'>
+              <Nav.Link>
+                <Link className='link' to={'/'}>
                   Home
-                </a>
-              </li>
-              <li className='nav-item'>
-                <a className='nav-link active' href='#'>
+                </Link>
+              </Nav.Link>
+              <Nav.Link>
+                <Link className='link' to={'/nosotros'}>
                   Nosotros
-                </a>
-              </li>
-              <li className='nav-item dropdown'>
-                <a className='nav-link dropdown-toggle' href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false'>
-                  Sanidad
-                </a>
-                <ul className='dropdown-menu'>
-                  <li>
-                    <a className='dropdown-item' href='#'>
-                      Médicos
-                    </a>
-                  </li>
-                  <li>
-                    <a className='dropdown-item' href='#'>
-                      Guardapolvos
-                    </a>
-                  </li>
-                  <li>
-                    <a className='dropdown-item' href='#'>
-                      Diseño
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li className='nav-item dropdown'>
-                <a className='nav-link dropdown-toggle' href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false'>
-                  Administrativos
-                </a>
-                <ul className='dropdown-menu'>
-                  <li>
-                    <a className='dropdown-item' href='#'>
-                      Camiseria
-                    </a>
-                  </li>
-                  <li>
-                    <a className='dropdown-item' href='#'>
-                      Sastreria
-                    </a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </div>
+                </Link>
+              </Nav.Link>{' '}
+              {/* className='link' */}
+              <Nav.Link>
+                <Link className='link' to={'/products'}>
+                  Productos
+                </Link>
+              </Nav.Link>
+              <NavDropdown title='Categorías' id='basic-nav-dropdown0'>
+                <NavDropdown.Item id='dropDown'>
+                  <Link className='link' to={'/admin'}>
+                    Administrativos
+                  </Link>
+                </NavDropdown.Item>
+                <NavDropdown.Item id='dropDown'>
+                  <Link className='link' to={'/sanid'}>
+                    Sanidad
+                  </Link>
+                </NavDropdown.Item>
+              </NavDropdown>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+        <div className='rightSide'>
           <CartWidget />
         </div>
-      </nav>
+      </Navbar>
     </div>
   );
-};
+}
 
-export default Navbar;
+export default NavBar;
