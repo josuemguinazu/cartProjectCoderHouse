@@ -1,11 +1,19 @@
 import { useState } from 'react';
 
-const CartCounter = ({ initial, stock }) => {
-  const [count, setCount] = useState(initial);
+const CartCounter = ({ stock, qty, setQty }) => {
+  const [stocks, setStocks] = useState(stock);
 
-  const addItem = () => count < stock && setCount(count + 1);
+  // const actStock = setStocks(stock - count);
 
-  const removeItem = () => count > initial && setCount(count - 1);
+  const addItem = () => {
+    qty < stock && setQty(qty + 1);
+    setStocks(stock - qty);
+  };
+
+  const removeItem = () => {
+    qty > 1 && setQty(qty - 1);
+    stocks < stock && setStocks(stocks + 1);
+  };
 
   return (
     <>
@@ -13,7 +21,7 @@ const CartCounter = ({ initial, stock }) => {
         <button className='btnCount' onClick={addItem}>
           +
         </button>
-        <p className='count'>{count}</p>
+        <p className='count'>{qty}</p>
         <button className='btnCount' onClick={removeItem}>
           -
         </button>

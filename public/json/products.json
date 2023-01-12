@@ -1,11 +1,83 @@
 [
-  { "id": "1", "categoria": "admin", "nombre": "Camisa dama", "tela": "Dupion", "img": "./img/admin3.jpg", "precio": "4290" },
-  { "id": "2", "categoria": "admin", "nombre": "Camisa dama", "tela": "Ratier", "img": "./img/admin4.jpg", "precio": "4990" },
-  { "id": "3", "categoria": "admin", "nombre": "Camisa dama", "tela": "Batista", "img": "./img/admin3.jpg", "precio": "3890" },
-  { "id": "4", "categoria": "admin", "nombre": "Pantalón vestir", "tela": "Gab/spdx", "img": "./img/admin6.jpg", "precio": "4990" },
-  { "id": "5", "categoria": "admin", "nombre": "Saco sastrería", "tela": "Gab/spdx", "img": "./img/admin8.jpg", "precio": "8990" },
-  { "id": "6", "categoria": "sanid", "nombre": "Ambo médico", "tela": "Arciel", "img": "./img/sanid2.jpg", "precio": "6690" },
-  { "id": "7", "categoria": "sanid", "nombre": "Ambo diseño", "tela": "Arciel", "img": "./img/sanid4.jpg", "precio": "8290" },
-  { "id": "8", "categoria": "sanid", "nombre": "Ambo combinado", "tela": "Arciel", "img": "./img/sanid6.jpg", "precio": "4890" },
-  { "id": "9", "categoria": "sanid", "nombre": "Guardapolvo", "tela": "Arciel", "img": "./img/sanid8.jpg", "precio": "5290" }
+  {
+    "id": "nez7QYLzUgyNDbvrm5L0",
+    "categoria": "admin",
+    "nombre": "Camisa dama",
+    "tela": "Dupion",
+    "img": "./img/admin3.jpg",
+    "precio": "4290",
+    "stock": "20"
+  },
+  {
+    "id": "DWE1tDAaDIDUrTl8sc0t",
+    "categoria": "admin",
+    "nombre": "Camisa dama",
+    "tela": "Ratier",
+    "img": "./img/admin4.jpg",
+    "precio": "4990",
+    "stock": "22"
+  },
+  {
+    "id": "nQyRfZjHVAMvbrADVIVl",
+    "categoria": "admin",
+    "nombre": "Camisa dama",
+    "tela": "Batista",
+    "img": "./img/admin3.jpg",
+    "precio": "3890",
+    "stock": "28"
+  },
+  {
+    "id": "3H72VDAAPJOkYwqT5KfC",
+    "categoria": "admin",
+    "nombre": "Pantalón vestir",
+    "tela": "Gab/spdx",
+    "img": "./img/admin6.jpg",
+    "precio": "4990",
+    "stock": "38"
+  },
+  {
+    "id": "XwnPe9ns4C9CaH3V2tTk",
+    "categoria": "admin",
+    "nombre": "Saco sastrería",
+    "tela": "Gab/spdx",
+    "img": "./img/admin8.jpg",
+    "precio": "8990",
+    "stock": "27"
+  },
+  {
+    "id": "1gYCVA3S34weRJBgxdl2",
+    "categoria": "sanid",
+    "nombre": "Ambo médico",
+    "tela": "Arciel",
+    "img": "./img/sanid2.jpg",
+    "precio": "6690",
+    "stock": "50"
+  },
+  {
+    "id": "90quNBL99u2cZN74IH9B",
+    "categoria": "sanid",
+    "nombre": "Ambo diseño",
+    "tela": "Arciel",
+    "img": "./img/sanid4.jpg",
+    "precio": "8290",
+    "stock": "21"
+  },
+  {
+    "id": "AbaiQ7M30ybGsqIXt7fn",
+    "categoria": "sanid",
+    "nombre": "Ambo combinado",
+    "tela": "Arciel",
+    "img": "./img/sanid6.jpg",
+    "precio": "4890",
+    "stock": "60"
+  },
+  {
+    "id": "emMImDxdY9fBfo0CM3Tx",
+    "categoria": "sanid",
+    "nombre": "Guardapolvo",
+    "tela": "Arciel",
+    "img": "./img/sanid8.jpg",
+    "precio": "5290",
+    "stock": "18"
+  }
 ]

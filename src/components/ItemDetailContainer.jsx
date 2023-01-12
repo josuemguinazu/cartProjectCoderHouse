@@ -2,23 +2,31 @@ import ListGroup from 'react-bootstrap/ListGroup';
 import CartCounter from './CartCounter';
 import { Link } from 'react-router-dom';
 import Card from 'react-bootstrap/Card';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import { getProductById } from '../services/getProductById';
+import { CartContext } from './Context/CartContext';
 
 const ItemDetailContainer = () => {
-  const stock = 12;
+  const { addItem } = useContext(CartContext);
 
-  const { id } = useParams();
   const [prodSelect, setProdSelect] = useState({});
+  const [sold, setSold] = useState(false);
+  const [qty, setQty] = useState(0);
+  const { id } = useParams();
+
   const initProd = async () => {
     const product = await getProductById('../../json/products.json', id);
     setProdSelect(product);
   };
 
+  const addToCart = () => {
+    addItem(prodSelect, qty);
+    setSold(true);
+  };
   useEffect(() => {
     initProd();
-  }, []);
+  });
 
   return (
     <>
@@ -41,19 +49,22 @@ const ItemDetailContainer = () => {
           <ListGroup className='list-group-flush'>
             <ListGroup.Item id='tela'>Tela: {prodSelect.tela}</ListGroup.Item>
             <ListGroup.Item id='precio'>${prodSelect.precio}.-</ListGroup.Item>
-            <ListGroup.Item>{<CartCounter initial={1} stock={stock} />}</ListGroup.Item>
+            <ListGroup.Item>
+              <CartCounter qty={qty} setQty={setQty} stock={prodSelect.stock} />
+            </ListGroup.Item>
           </ListGroup>
           <Card.Body>
             <Card.Link className='divBtn'>
-              <Link
-                onClick={() => {
-                  alert(`Felicitaciones, se agregó ${prodSelect.nombre} al carrito correctamente`);
-                }}
-                id='buyBtn'
-                className='btnLink'
-                to={`/products/detail/${id}`}
-              >
-                Comprar
+              <Link>
+                {sold ? (
+                  <Link to={'/cart'} className='btnLink'>
+                    Terminar compra
+                  </Link>
+                ) : (
+                  <Link onClick={addToCart} className='btnLink'>
+                    Agregar al carrito
+                  </Link>
+                )}
               </Link>
             </Card.Link>
           </Card.Body>
