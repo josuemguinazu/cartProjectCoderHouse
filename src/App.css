@@ -219,6 +219,14 @@ Link {
 }
 
 /* ! CART */
+/* cartLength es el numero que aparece al lado del carrito */
+.cartLength {
+  text-decoration: none;
+  margin-left: 4px;
+  color: black;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
 .cartPage {
   width: 95%;
   margin: 2%;
@@ -231,6 +239,8 @@ Link {
   margin: 2%;
   padding: 1.5%;
   border: 0.5px solid rgb(187, 119, 119);
+  border-bottom-left-radius: 25px;
+  border-top-right-radius: 25px;
 }
 .cartImg {
   width: 350px;
@@ -275,16 +285,21 @@ Link {
 }
 .formLeft form {
   width: 32vw;
-  height: 60vh;
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
 form input {
+  border: 1px solid antiquewhite;
+  outline: none;
   margin: 2%;
   padding: 2%;
   border-bottom-left-radius: 25px;
   border-top-right-radius: 25px;
+}
+form input:focus {
+  border: 1px solid rgb(187, 119, 119);
+  transition: 0.3s;
 }
 .prodRight {
   width: 32vw;
@@ -301,6 +316,8 @@ form input {
   padding: 2%;
 }
 .btnBuy {
+  font-size: 1.2rem;
+  text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -308,4 +325,19 @@ form input {
 .buyBtn {
   width: 18vw;
   margin-bottom: 4%;
+}
+
+.finalContainer {
+  border: 1px solid rgb(187, 119, 119);
+  border-bottom-left-radius: 25px;
+  border-top-right-radius: 25px;
+  margin: 6%;
+  padding: 8%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.btnFinal {
+  margin-top: 6%;
 }
