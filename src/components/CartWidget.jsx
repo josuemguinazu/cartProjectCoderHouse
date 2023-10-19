@@ -2,9 +2,11 @@ import { useContext } from 'react';
 import Cart from '../logos/cart.png';
 import { Link } from 'react-router-dom';
 import { CartContext } from './Context/CartContext';
+import { useSelector } from 'react-redux';
 
 const CartWidget = () => {
-  const { cart } = useContext(CartContext);
+  // const { cart } = useContext(CartContext);
+  const { cart } = useSelector((state) => state.cart);
 
   const cartCounter = () => {
     const itemCount = cart.map((qty) => qty.qty);

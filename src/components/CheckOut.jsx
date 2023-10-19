@@ -1,11 +1,14 @@
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import { CartContext } from './Context/CartContext';
+// import { CartContext } from './Context/CartContext';
+import { useSelector } from 'react-redux';
 import { UserContext } from './Context/UserContext';
 import { UserData } from './UserData';
 
 export const CheckOut = () => {
-  const { cart } = useContext(CartContext);
+  // const { cart } = useContext(CartContext);
+  const { cart } = useSelector((state) => state.cart);
+
   const { name, email, pass, tel, adress, card, cvc } = useContext(UserContext);
 
   const total = () => {

@@ -217,7 +217,13 @@ Link {
 .about p {
   font-size: 1.2rem;
 }
-
+/* ! LOADER */
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
 /* ! CART */
 /* cartLength es el numero que aparece al lado del carrito */
 .cartLength {

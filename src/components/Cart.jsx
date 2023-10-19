@@ -1,13 +1,16 @@
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import { getProductById } from '../services/getProductById';
-import { CartContext } from './Context/CartContext';
+// import { getProductById } from '../services/getProductById';
+// import { CartContext } from './Context/CartContext';
+import { useDispatch, useSelector } from 'react-redux';
+import { removeCartProduct, clearCart } from '../Redux/slices/Cart/cartSlice';
 
 export default function Cart() {
-  const { cart, cartTotal, removeItem, clearCart } = useContext(CartContext);
-
+  // const { cart, cartTotal, removeItem, clearCart } = useContext(CartContext);
+  const dispatch = useDispatch();
+  const { cart } = useSelector((state) => state.cart);
   // hacer alguna especie de alerta de carrito vacio
-  if (cartTotal() === 0) {
+  if (cart.length === 0) {
     return (
       <div className='emptyCart'>
         <h1>No hay productos en el carrito :(</h1>
@@ -36,7 +39,7 @@ export default function Cart() {
                 <button
                   className='btnLink'
                   onClick={() => {
-                    removeItem(prod.id);
+                    dispatch(removeCartProduct({ id: prod.id }));
                   }}
                 >
                   Eliminar producto

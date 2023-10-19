@@ -1,13 +1,13 @@
 import { useContext } from 'react';
 import { UserContext } from './Context/UserContext';
-import { CartContext } from './Context/CartContext';
+// import { CartContext } from './Context/CartContext';
 import { Link } from 'react-router-dom';
 
 export const FinalCheckOut = () => {
   const { name, email, adress } = useContext(UserContext);
-  const { cart } = useContext(CartContext);
-  console.log(cart);
-  console.log(name);
+  // const { cart } = useContext(CartContext);
+  // console.log(cart);
+  // console.log(name);
   return (
     <>
       <div className='finalContainer'>

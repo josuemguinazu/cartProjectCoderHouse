@@ -6,9 +6,12 @@ import { useEffect, useState, useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import { getProductById } from '../services/getProductById';
 import { CartContext } from './Context/CartContext';
+import { addCartProduct } from '../Redux/slices/Cart/cartSlice';
+import { useDispatch } from 'react-redux';
 
 const ItemDetailContainer = () => {
   const { addItem } = useContext(CartContext);
+  const dispatch = useDispatch();
 
   const [prodSelect, setProdSelect] = useState({});
   const [sold, setSold] = useState(false);
@@ -22,6 +25,7 @@ const ItemDetailContainer = () => {
 
   const addToCart = () => {
     addItem(prodSelect, qty);
+    dispatch(addCartProduct({ prod: prodSelect, qty }));
     setSold(true);
   };
   useEffect(() => {
